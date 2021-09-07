@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic AeRoDrome</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene
+      embedded
+      arjs="sourceType: webcam"
+      ar-mode-ui="enabled: false"
+      vr-mode-ui="enabled: false"
+    >
+    
+      <!-- Marker 1 -->
+      <a-marker
+        type="pattern"
+        url="https://cdn.glitch.com/ed931a53-3451-4ef9-96f1-8a0b3e2d4bc2%2Fpattern-aero1.patt?v=1630917998320"
+      >
+        <!-- Sound 1 -->
+        <a-entity id="plane1" 
+           sound="src: url(https://cdn.glitch.com/ed931a53-3451-4ef9-96f1-8a0b3e2d4bc2%2Fsound1.mp3?v=1630906919508); autoplay: true"></a-entity>
+
+        <!-- Aeroplane 1 -->
+        <a-entity
+          id="aero1" scale=".001 .001 .001"
+          position="-2 0 5.5"
+          rotation="0 0 0"
+          gltf-model="https://cdn.glitch.com/ed931a53-3451-4ef9-96f1-8a0b3e2d4bc2%2Faero1.glb?v=1630906775898"
+          
+          shadow
+        ></a-entity>
+      </a-marker>
+      
+      
+      <!-- Marker 2 -->
+      <a-marker
+        type="pattern" 
+        url="https://cdn.glitch.com/ed931a53-3451-4ef9-96f1-8a0b3e2d4bc2%2Fpattern-aero2.patt?v=1630917998292"
+      >
+         <!-- Sound 2 -->
+        <a-entity id="plane2" 
+           sound="src: url(https://cdn.glitch.com/ed931a53-3451-4ef9-96f1-8a0b3e2d4bc2%2Fsound2.mp3?v=1630906919723); autoplay: true"></a-entity>
+        <!-- Aeroplane 2 -->
+        <a-entity
+          id="aero2" scale =".5 .5 .5"
+          position="0 0 0"
+          rotation="0 0 0"
+          gltf-model="https://cdn.glitch.com/ed931a53-3451-4ef9-96f1-8a0b3e2d4bc2%2Faero2.gltf?v=1630907819336"
+          
+          shadow
+        ></a-entity>
+      </a-marker>
+      
+      
+      <!-- Marker 3 -->
+      <a-marker-
+        type="pattern"
+        url="https://cdn.glitch.com/ed931a53-3451-4ef9-96f1-8a0b3e2d4bc2%2Fpattern-aero3.patt?v=1630917998392"
+      >
+        <!-- Aeroplane 3 -->
+        <a-entity
+          id="aero3" scale=".2 .2 .2"
+          position="0 0 0"
+          rotation="0 90 0"
+          gltf-model="https://cdn.glitch.com/ed931a53-3451-4ef9-96f1-8a0b3e2d4bc2%2Faero3.gltf?v=1630906761500"
+          
+          shadow
+        ></a-entity>
+      </a-marker>
+      
+      
+      <!-- Marker 4 -->
+      <a-marker-camera
+        type="pattern"
+        url="https://cdn.glitch.com/ed931a53-3451-4ef9-96f1-8a0b3e2d4bc2%2Fpattern-aero4.patt?v=1630917998211"
+      >
+        <!-- Aeroplane 4 -->
+        <a-entity
+          id="aero4" scale="2 2 2"
+          position="0 5 0"
+          rotation="0 90 0"
+          gltf-model="https://cdn.glitch.com/ed931a53-3451-4ef9-96f1-8a0b3e2d4bc2%2Faero4.glb?v=1630907889341"
+          shadow
+        ></a-entity>
+        
+      </a-marker-camera>
+    </a-scene>
+  </body>
+</html>
